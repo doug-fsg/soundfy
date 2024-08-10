@@ -231,7 +231,9 @@ criarlabel() {
         "Abrindo player!",
         "Carregando sua trilha"
       );
-      window.location.href = `http://localhost:8080/track?${taskId}`;
+      const baseURL = process.env.VUE_APP_URL || "http://localhost:8080";
+      window.location.href = `${baseURL}/track?${taskId}`;
+      //window.location.href = `http://localhost:8080/track?${taskId}`;
     },
 
 
